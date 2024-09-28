@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+</head>
+<body>
+    <header>
+    <a class="logo" href="/index.html"><img src="/src/image/logo-claro (3).png" alt=""></a>
+    <nav>
+        <ul>
+            <li class="li-nav" ><a href="/index.html">Inicio</a></li>
+            <li class="li-nav" ><a href="/src/pages/cursos.html">Cursos</a></li>
+            <li class="li-nav" ><a href="/src/pages/sobre.html">Sobre</a></li>
+            <li class="li-nav" ><a href="/src/pages/formulario.html">Formulário</a></li>
+            <li class="li-nav" ><a href="/src/pages/blog.html">Blog</a></li>   
+        </ul>
+    </nav>
+</header>
+    <div class="container"></div>
+        <h1>Quiz de Tecnologia</h1>
+        <div id="quiz-container">
+            <div id="question">Carregando pergunta...</div>
+            <div class="choices" id="choices">
+                <!-- Opções serão geradas dinamicamente -->
+            </div>
+            <div id="feedback"></div>
+        </div>
+        <button class="button" id="next-btn" onclick="nextQuestion()">Próxima pergunta</button>
+        <div id="scoreboard">
+            <h2>Ranking</h2>
+            <ol id="ranking">
+                <!-- Ranking será atualizado aqui -->
+            </ol>
+        </div>
+        <div id="end-quiz-options" style="display:none;">
+            <button id="repeat-btn" onclick="restartQuiz()">Repetir Quiz</button>
+            <button id="home-btn" onclick="goToHomePage()">Página Inicial</button>
+        </div>
+    </div>
+    <script src="/src/js/script.js"></script>
+</body>
+</html>

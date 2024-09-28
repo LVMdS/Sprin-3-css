@@ -1,0 +1,315 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(/src/image/galaxia-noturna.jpg);
+}
+.logo{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    margin-bottom: 30px;
+}
+/* Estilização da Navbar */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+.nav-li{
+    text-align: center;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilização da Seção de Cards */
+.feed-noticias {
+    padding: 20px;
+}
+
+.feed-noticias h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Container de Cards com Flexbox */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Espaço entre os cards */
+}
+
+/* Estilização dos Cards */
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 30%; /* Cards ocupam 30% da largura, para caber 3 por linha */
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.card p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card {
+        width: 45%; /* Ajusta para 2 cards por linha em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Ajusta para 1 card por linha em telas muito pequenas */
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.container , h1{
+    color: antiquewhite;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#quiz-container {
+    color: blanchedalmond;
+    margin-bottom: 20px;
+}
+
+#question {
+    color: #f9f9f9;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#choices button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background-color:  #4A5C6A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#choices button:hover {
+    background: #4A5C6A;
+    color: #ffffff;
+    box-shadow: 0 0 10px #4A5C6A, 0 0 40px #4A5C6A, 0 0 70px #4A5C6A;
+}
+#choices:active{
+    color:#4A5C6A; 
+    background: #000000;
+ }
+
+ #end-quiz-options button {
+    position: relative;
+    display: inline-block;
+    padding: 15px 20px;
+    margin: 40px 0;
+    color:#4A5C6A;
+    font-family:'open_sansbold';
+    text-decoration: none;
+    transition: 0.4s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 10px;
+    border: 2px solid #4A5C6A;
+    border-radius:50px;
+    margin-left: 5%;
+ }
+#end-quiz-options button:hover{
+    background: #4A5C6A;
+    color: #ffffff;
+    box-shadow: 0 0 10px #4A5C6A, 0 0 40px #4A5C6A, 0 0 70px #4A5C6A;
+}
+#end-quiz-options button:active{
+    color:#4A5C6A; 
+    background: #000000;
+}
+
+
+#feedback {
+    color: ghostwhite;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+#scoreboard {
+    color: #f9f9f9;
+    margin-top: 30px;
+}
+
+#ranking {
+    text-align: left;
+    padding-left: 20px;
+}
+
+nav{
+    margin-top: 100px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.20);
+    border: 2px solid rgba(255, 255, 255, 0.10);
+}
+.button{
+    position: relative;
+  display: inline-block;
+  padding: 15px 20px;
+  margin: 40px 0;
+  color:#4A5C6A;
+  font-family:'open_sansbold';
+  text-decoration: none;
+  transition: 0.4s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+  border: 2px solid #4A5C6A;
+  border-radius:50px;
+  margin-left: 20%;
+}
+.button:hover{
+    background: #4A5C6A;
+    color: #000;
+    box-shadow: 0 0 10px #4A5C6A, 0 0 40px #4A5C6A, 0 0 70px #4A5C6A;
+  }
+.button:active{
+     color:#4A5C6A; 
+     background: #000000;
+  }
+
+#next-btn {
+    display: none; /* Como já está no JavaScript */
+    margin: 20px auto;
+    display: block; /* Garante que o botão seja um elemento de bloco */
+    text-align: center;
+}
+#quiz-container {
+    align-items: center;
+    margin-left: 30%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+}
+
+.end-quiz-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2{
+    margin: 10px 0;
+    text-align: left;
+    margin-left: 4%;
+}
+h3{
+    margin: 10px 0;
+    text-align: center;
+    margin-left: 4%;
+}
+#ranking {
+    list-style-type: none; /* Remove os marcadores padrão */
+    padding-left: 0; /* Remove o espaçamento lateral */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px;
+}
+
+#ranking li {
+    max-width: 200px;
+    margin-right: 40%;
+    display: block;
+    margin: 10px 0;
+    padding: 8px; /* Reduz o padding para diminuir o tamanho */
+    background-color: #4A5C6A;
+    color: white;
+    border-radius: 5px;
+    cursor: default; /* Cursor padrão, já que não é clicável */
+    /* Removido o efeito neon */
+    box-shadow: none; 
+    font-size: 0.9em; /* Diminui o tamanho da fonte */
+}
+
+#ranking li:hover {
+    background-color: #4A5C6A; /* Mantém a cor ao passar o mouse */
+}
+
+#scoreboard {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#quiz-container {
+    max-width: 600px; /* Para dar espaço ao ranking */
+    margin: 0 auto;
+}
+
+#next-btn, #feedback {
+    margin-top: 20px;
+}
+
+/* Estiliza as mensagens de correto/errado */
+#feedback {
+    color: lime;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    color: #f9f9f9;
+}
+.ranking-container{
+    color: #f9f9f9;
+}
