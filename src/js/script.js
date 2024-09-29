@@ -33,8 +33,8 @@ let ranking = [];
 // Randomizar perguntas
 quizData.sort(() => Math.random() - 0.5);
 
-const correctSound = new Audio('sounds/correct.mp3');
-const wrongSound = new Audio('sounds/wrong.mp3');
+const correctSound = new Audio('/src/audio/fire.mp3');
+const wrongSound = new Audio('/src/audio/buzzer.mp3');
 
 function loadQuestion() {
     const questionElement = document.getElementById("question");
@@ -98,13 +98,15 @@ function updateRanking() {
     ranking.sort((a, b) => b - a); 
 
     const rankingElement = document.getElementById("ranking");
-    rankingElement.innerHTML = "";
+    if (rankingElement) {
+        rankingElement.innerHTML = "";
     
-    ranking.slice(0, 5).forEach((points, index) => {  // Exibe apenas o top 5
-        const listItem = document.createElement("li");
-        listItem.textContent = `Jogador ${index + 1}: ${points} pontos`;
-        rankingElement.appendChild(listItem);
-    });
+        ranking.slice(0, 5).forEach((points, index) => {  // Exibe apenas o top 5
+            const listItem = document.createElement("li");
+            listItem.textContent = `Jogador ${index + 1}: ${points} pontos`;
+            rankingElement.appendChild(listItem);
+        });
+    }
 
     localStorage.setItem("quizRanking", JSON.stringify(ranking));
 }
@@ -117,17 +119,41 @@ function loadRanking() {
     }
 }
 
+// Adicionar função para carregar o ranking na página inicial
+function loadRankingHomePage() {
+    const storedRanking = localStorage.getItem("quizRanking");
+    if (storedRanking) {
+        ranking = JSON.parse(storedRanking);
+
+        const rankingList = document.getElementById("ranking-list");
+        if (rankingList) {
+            rankingList.innerHTML = "";
+
+            ranking.slice(0, 5).forEach((points, index) => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `Jogador ${index + 1}: ${points} pontos`;
+                rankingList.appendChild(listItem);
+            });
+        }
+    }
+}
+
 function restartQuiz() {
     // Se estiver em outra página, redireciona para quiz.html
-    window.location.href = "quiz.html";  
+    window.location.href = "/src/pages-quiz/quiz.html";  
 }
 
 function goToHomePage() {
-    window.location.href = "index.html"; // Troque para o URL da página inicial
+    window.location.href = "/index.html"; // Troque para o URL da página inicial
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    loadQuestion();
-    loadRanking();
-    document.getElementById("next-btn").style.display = "none";
+    const isQuizPage = document.getElementById("question");  // Verifica se é a página de quiz
+    if (isQuizPage) {
+        loadQuestion();
+        loadRanking();
+        document.getElementById("next-btn").style.display = "none";
+    } else {
+        loadRankingHomePage();  // Se não for a página de quiz, carrega o ranking na home
+    }
 });
