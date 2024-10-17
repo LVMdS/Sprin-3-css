@@ -157,3 +157,20 @@ document.addEventListener("DOMContentLoaded", () => {
         loadRankingHomePage();  // Se não for a página de quiz, carrega o ranking na home
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const textElement = document.getElementById("intro-text");
+    const text = textElement.innerHTML;
+    textElement.innerHTML = ""; // Limpa o texto inicial
+    let index = 0;
+    const typingSpeed = 50; // Velocidade da digitação em milissegundos
+
+    function typeWriter() {
+        if (index < text.length) {
+            textElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, typingSpeed);
+        }
+    }
+
+    typeWriter(); // Inicia o efeito
+});
