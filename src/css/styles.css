@@ -263,6 +263,7 @@ h3{
 
 a{
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 section{
@@ -274,7 +275,7 @@ section{
 .login-lebel{
     display: flex;
     text-align: center;
-    font-family:'open_sansbold';
+    font-family:Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: white;
     margin-left: 48%;
@@ -296,7 +297,8 @@ section{
     padding: 15px 20px;
     margin: 40px 0;
     color:#4A5C6A;
-    font-family:'open_sansbold';
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
     text-decoration: none;
     transition: 0.4s;
     letter-spacing: 4px;
@@ -357,8 +359,8 @@ p{
     text-align: center;
     margin:30px;
     padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 21px;
     font-weight: bold;
 
 }
@@ -367,7 +369,7 @@ p{
     margin-left: 45%;
 }
 #intro-text {
-    font-family: "Courier New", Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
     white-space: pre-wrap; /* Preserve quebras de linha */
     border-right: 2px solid;
     animation: blinkCursor 0.7s steps(44) infinite normal;
