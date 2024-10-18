@@ -182,7 +182,7 @@ nav{
 }
 #quiz-container {
     align-items: center;
-    margin-left: 30%;
+    margin-left: 40%;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -318,7 +318,7 @@ section{
      background: #000000;
   }
 .h2-index{
-    margin-left: 37%;
+    margin-left: 35%;
     margin-top: 50px;
   }
 
@@ -382,4 +382,7 @@ p{
     to {
         border-right-color: transparent;
     }
+}
+.img-quiz-index{
+    border-radius: 30px;
 }
