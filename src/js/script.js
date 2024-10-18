@@ -160,17 +160,27 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("intro-text");
     const text = textElement.innerHTML;
-    textElement.innerHTML = ""; // Limpa o texto inicial
-    let index = 0;
     const typingSpeed = 50; // Velocidade da digitação em milissegundos
+    const pauseDuration = 1500; // Tempo de pausa antes de recomeçar (em milissegundos)
 
     function typeWriter() {
-        if (index < text.length) {
-            textElement.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(typeWriter, typingSpeed);
+        let index = 0;
+        textElement.innerHTML = ""; // Limpa o texto inicial
+
+        function type() {
+            if (index < text.length) {
+                textElement.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(type, typingSpeed);
+            } else {
+                // Após terminar de digitar, aguarda a pausa e reinicia o efeito
+                setTimeout(typeWriter, pauseDuration);
+            }
         }
+
+        type(); // Inicia o efeito
     }
 
-    typeWriter(); // Inicia o efeito
+    typeWriter(); // Chama a função pela primeira vez
 });
+
