@@ -6,6 +6,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="/src/css/styles.css">
     <link rel="stylesheet" href="/src/css/rolagem.css">
+    <link rel="stylesheet" href="/src/css/login.css">
 </head>
 <body>
     <header>
@@ -21,18 +22,28 @@
         </nav>   
     </header>
 
+    <div class="form-area">
+        <div class="area"> 
     <div class="input-group">
         <label class="login-lebel" for="email">Email</label>
         <input class="login-input" type="email" id="email" name="email" placeholder="Seu email" required>
+        <i class="fa fa-user"></i>
     </div>
 
     <div class="input-group">
         <label class="login-lebel" for="password">Senha</label>
         <input class="login-input" type="password" id="password" name="password" placeholder="Sua senha" required>
+        <i class="fa fa-user"></i>
+    </div>
+    <div class="options">
+        <label><input type="checkbox"> Lembrar</label>
+        <a href="#">Esqueceu a senha?</a>
     </div>
     <input class="button-login" type="submit" value="Login" onclick="window.location.href='/index.html';">
+    </div>
+    </div>
     <footer>
-        <p>Contato: <a href="mailto:contato@exemplo.com">contato@exemplo.com</a></p>
+        <p>Contato: <a href="mailto:contato@exemplo.com">Techquiz@email.com</a></p>
     </footer>
     <script src=""></script>
 </body>
