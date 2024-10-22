@@ -8,6 +8,7 @@
 	border: 6px solid #00000030;
 	box-shadow: 0 0 30px #dfd3d32a;
 	border-radius: 25px;
+  margin: 30px;
 }
 
 .form-area {
@@ -21,7 +22,7 @@
 }
 
 .input-group input {
-	padding-right: 30px;
+	align-items: center;
 }
 
 .area input, button {
@@ -29,12 +30,12 @@
 	border: 1px solid #bababa;
 	background: transparent;
 	outline: none;
-	height: 50px;
+	height: 40px;
 	color: #ffffff;
 	font-size: 16px;
 	width: 100%;
-	margin-bottom: 20px;
-	padding: 15px;
+	margin-bottom: 10px;
+	padding: 10px;
 	border-radius: 50px;
 }
 
@@ -49,17 +50,19 @@
 	font-size: 18px;
 	line-height: 3.5;
 }
-.options input[type="checkbox"] {
+.terms input[type="checkbox"] {
 	width: 15px;
 	height: auto;
 }
 .area a {
 	text-decoration: none;
-	color: #fff;
+	color: #272424;
 }
 .area button {
-	background: #fff;
+	background: #efefef;
 	color: #262626;
+  padding: 5px;
+
 }
 
 .login-lebel{
@@ -84,8 +87,8 @@
 	position: relative;
 	display: inline-block;
 	padding: 15px 20px;
-	margin: 30px 0;
-	color:#4A5C6A;
+	margin: 40px 0;
+	color:#000000;
 	font-family:Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	text-decoration: none;
@@ -93,7 +96,7 @@
 	letter-spacing: 4px;
 	overflow: hidden;
 	margin-right: 50px;
-	border: 2px solid #4A5C6A;
+	border: 2px solid #cbd0d3;
 	border-radius:50px;
 }
 .button-login:hover{
@@ -102,6 +105,6 @@
 	box-shadow: 0 0 10px rgb(10, 116, 152), 0 0 40px #060c8a, 0 0 70px #460251;
 }
 .button-login:active{
-	 color:#4A5C6A; 
+	 color:#4783b1; 
 	 background: #000000;
 }

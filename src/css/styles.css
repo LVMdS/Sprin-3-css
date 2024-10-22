@@ -395,26 +395,23 @@ section {
 }
 
 p {
-    text-align: center;
-    margin: 0px;
+    text-align:center;
     padding: 10px;
     font-family: Arial, sans-serif;
     font-size: 21px;
     font-weight: bold;
-
 }
 
 .h2-cadastro {
-    margin-top: 50px;
-    margin-left: 45%;
+    margin-left: 41%;
 }
 
 .intro {
     margin-top: 30px;
     position: relative;
-    background: url() no-repeat center;
+    background: url(../image/666.jpeg) no-repeat center;
     background-size: cover;
-    height: 200px;
+    height: 300px;
     overflow: hidden;
 }
 
