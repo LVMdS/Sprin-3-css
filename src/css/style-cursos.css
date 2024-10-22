@@ -1,0 +1,436 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: .3s ease;
+}
+  
+body {
+    background-color: #f5f5f5;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #11212D;
+    padding: 10px 0;
+    gap: 30px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 30px;
+}
+
+
+.menu a {
+    color: #f5f5f5ec;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+
+.menu a:hover {
+    color: #000;
+    background: #fff;
+}
+
+.btn {
+    background: transparent;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid #fff;
+}
+
+.menu .btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn.primary {
+    /* background-color: rgba(0,0,0,.60); */
+    background-color: #ff9900;
+    border: none;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a{
+    width: 56px;
+    height: 56px;
+}
+
+.logo img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.logo a:hover{
+    content: url('../image/logo-amarela-clara.png'); 
+}
+
+.hero {
+    background-image: url('../image/banner-11.png');
+    background-size: cover;
+    background-position: center;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.titulo-e-botao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #ffffffaf;
+}
+
+.button {
+    max-width: 300px;
+    padding: 15px 30px;
+    background-color: rgba(0,0,0,.60);
+    color: #f5f5f5;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button:hover{
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+}
+
+/* Seção de cursos */
+.courses {
+    padding: 50px;
+    text-align: center;
+    background: url(../image/galaxia-noturna-paint.jpg);
+}
+
+.courses h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #f5f5f5;
+}
+
+.cards-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 20px;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #021017;
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    padding: 15px; 
+    width: calc(33.33% - 20px); /* Largura do card em relação ao contêiner */
+    transition: transform 0.3s; /* Transição para efeitos de hover */
+}
+
+.card:hover {
+    cursor: default;
+    transform: scale(0.95);
+}
+
+.div-logo-cursos img {
+    width: 100px; 
+    height: 50px; 
+    object-fit: contain; 
+}
+
+.div-logo-cursos{
+    border-radius: 10px;
+}
+
+
+h3 {
+    margin: 10px 0; 
+    font-size: 1.5em; 
+}
+
+p {
+    font-size: 1em; 
+    color: #555; 
+}
+
+.card h3{
+    color: #2BDEFD;
+}
+
+.card p{
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+.card a {
+    max-width: 140px;
+    text-align: center;
+    display: inline-block;
+    align-self: center;
+    margin-top: auto;
+    padding: 8px 30px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid #fff;
+    color: #f5f5f5;
+    background-color: rgba(0,0,0,.30);
+}
+
+
+/* Seção de blog */
+.blog {
+    background-color: #f5f5f5;
+    padding: 50px;
+}
+
+.blog h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.blog-posts {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.post {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.post a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Seção de FAQ */
+.faq {
+    background-color: #ffffff;
+    padding: 50px;
+    text-align: center;
+}
+.faq h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+.faq-item {
+    margin-bottom: 20px;
+}
+.faq-item h3 {
+    font-size: 1.5rem;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    min-width: 200px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 200px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.redes-sociais img{
+    max-width: 30px;
+    height: auto;
+    /* margin-top: 12px; */
+    margin-bottom: 12px;
+}
+
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #f39c12;
+}
+
+.footer-copy {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+
+@media(max-width: 768px){
+    .hero{
+        justify-content: flex-start;
+        height: 370px;
+    }
+    .hero h1{
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+    .courses h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 16px;
+    }
+}
+
+
+@media(max-width: 680px){
+    .cabecalho{
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+    }
+    .menu{
+        padding: 16px 0;
+        gap: 12px;
+    }
+    .menu li:nth-child(-n+3) a{
+        padding: 0;
+    }
+    .redes-sociais{
+        flex-direction: row;
+    }
+    .footer-sections{
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section{
+        text-align: center;
+    }
+    .redes-sociais img{
+        margin-right: 10px;
+        margin-bottom: 0;
+       }
+    .cards-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .blog-posts{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .post{
+        width: 80%;
+    }
+}
+
+@media(max-width: 426px){
+    .menu a{
+        font-size: 11px;
+        font-weight: 600;
+    }
+    .card{
+        width: 100%;
+    }
+    .post{
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 336px){
+    .menu a{
+        font-size: 10px;
+    }
+}
