@@ -1,0 +1,104 @@
+body{
+  background: url(/src/image/galaxia-noturna-paint.jpg);
+  background-size: cover;
+}
+/*sobre nos */
+.aboutt{
+  margin: 30px;
+	padding: 5% 10%;
+	text-align: center;
+  font-size: 21px;
+  background-color: ffffffla;
+	border: 2px solid #c3c0c3db;
+  border-radius: 40px;
+	box-shadow: 0 0 30px #c7c4c4f1;
+}
+
+h1.title{
+	margin-bottom: 20px;
+	color: #f9f9f9;
+	text-transform: uppercase;
+	font-size: 38px;
+	letter-spacing: 5px;
+}
+
+p{
+	color: #a9a9a9;
+}
+/*sobre nos */
+
+/*nosso time */
+.wrapper {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.wrapper h3 {
+  font-family: 'Allura', cursive;
+  font-size: 40px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: #ddd;
+  margin: 10px;
+}
+
+.wrapper .team {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.wrapper .team .team_member {
+  width: 325px;
+  margin: 10px;
+  background: #607796;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(11, 9, 9, 0.07);
+  padding: 25px;
+}
+
+.wrapper .team .team_member img {
+  width: 80px;
+}
+
+.wrapper .team .team_member h3 {
+  color: #000000;
+}
+
+.wrapper .team .team_member span {
+  font-size: 12px;
+  color: #0c1e37;
+}
+
+.wrapper .team .team_member p {
+  margin: 15px 0;
+  color: #ddd;
+}
+
+.wrapper .team .team_member .btn_grp {
+  display: flex;
+}
+
+.wrapper .team .team_member .btn_grp a {
+  background: #ddd;
+  display: block;
+  width: 125px;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 6px;
+  color: #444;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+.wrapper .team .team_member .btn_grp a:first-child:hover {
+  background: #0c1e37;
+  color: #fff;
+}
+
+.wrapper .team .team_member .btn_grp a:last-child:hover {
+  background: #0c1e37;
+  color: #fff;
+}

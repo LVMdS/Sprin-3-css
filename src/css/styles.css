@@ -219,6 +219,10 @@ nav {
     display: inline-block;
 }
 
+h1{
+    text-align: center;
+}
+
 h2 {
     margin: 10px 0;
     text-align: left;
@@ -409,22 +413,10 @@ p {
 .intro {
     margin-top: 30px;
     position: relative;
-    background: url(../image/666.jpeg) no-repeat center;
-    background-size: cover;
-    height: 300px;
+   
     overflow: hidden;
 }
 
-.container-m {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
-}
 
 #intro-text {
     font-family: Arial, Helvetica, sans-serif;
@@ -525,6 +517,27 @@ p {
     height: 100%;
 }
 /*fim-cards*/
+
+/*seçao */
+.about{
+    margin: 20px;
+      padding:20px 10%;
+      text-align: center;
+    background-color: #96a4aa;
+    margin-bottom: 20px;
+    font-weight: 700;
+    border: 2px solid #c3c0c3db;
+      box-shadow: 0 0 30px #c7c4c4f1;
+  }
+  .about p{
+    color: #0a1335;
+  }
+  .title-{
+    color: #d6dcde;
+    margin: 0px;
+    font-size: 30px;
+  }
+  /*seção */
 
 /*footer*/
 footer{
