@@ -219,7 +219,7 @@ nav {
     display: inline-block;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
@@ -399,7 +399,7 @@ section {
 }
 
 p {
-    text-align:center;
+    text-align: center;
     padding: 10px;
     font-family: Arial, sans-serif;
     font-size: 21px;
@@ -410,21 +410,13 @@ p {
     margin-left: 41%;
 }
 
-.intro {
-    margin-top: 30px;
-    position: relative;
-   
-    overflow: hidden;
-}
 
-
-#intro-text {
+/*#intro-text {
     font-family: Arial, Helvetica, sans-serif;
     white-space: pre-wrap;
-    /* Preserve quebras de linha */
+    /* Preserve quebras de linha 
     border-right: 2px solid;
-    animation: blinkCursor 0.7s steps(44) infinite normal;
-}
+    animation: blinkCursor 0.7s steps(44) infinite normal;*/
 
 @keyframes blinkCursor {
     from {
@@ -440,9 +432,82 @@ p {
     border-radius: 30px;
 }
 
+/*intro*/
+.banner-image {
+    position: relative;
+    height: 400px;
+    overflow: auto;
+}
+
+.container-m {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #d6dcde;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container-m h1 {
+    font-size: 30px;
+}
+
+.container-m h1 span {
+    border: 5px solid white;
+    padding: 6px 14px;
+    display: inline-block;
+}
+
+.cen {
+    margin: 20px;
+    display: block;
+    font-size: 20px;
+}
+
+.button-inicio {
+    position: relative;
+    display: inline-block;
+    padding: 10px 24px;
+    color: #d8e0e3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.4s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 0px;
+    border: 2px solid #3c4042;
+    border-radius: 50px;
+}
+
+.button-inicio:hover {
+    background: #cbc1c7;
+    color: #000;
+    box-shadow: 0 0 10px rgb(3, 31, 189), 0 0 40px #0a127c, 0 0 70px #34117b;
+}
+
+.button-inicio:active {
+    color: #4A5C6A;
+    background: #000000;
+}
+
+/*fim-intro*/
+
 /*cards*/
 .wrapper {
     padding: 10px 10%;
+}
+
+.wrapper h2 {
+    margin: 30px;
+    color: #e8e9eb;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin-left: 30%;
+    font-weight: 600;
 }
 
 #card-area {
@@ -453,7 +518,6 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
-    margin-top: 50px;
 }
 
 .box {
@@ -490,12 +554,13 @@ p {
 }
 
 .overlay h3 {
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 5px;
     margin-top: 80%;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 30px;
     letter-spacing: 2px;
+    color: #e2e8ef;
 }
 
 .overlay a {
@@ -516,111 +581,132 @@ p {
 .box:hover .overlay {
     height: 100%;
 }
+
 /*fim-cards*/
 
 /*seçao */
-.about{
+.about {
     margin: 20px;
-      padding:20px 10%;
-      text-align: center;
+    padding: 40px 10%;
+    text-align: center;
     background-color: #96a4aa;
     margin-bottom: 20px;
     font-weight: 700;
     border: 2px solid #c3c0c3db;
-      box-shadow: 0 0 30px #c7c4c4f1;
-  }
-  .about p{
+    box-shadow: 0 0 30px #c7c4c4f1;
+}
+
+.about p {
     color: #0a1335;
-  }
-  .title-{
+}
+
+.title {
     color: #d6dcde;
-    margin: 0px;
-    font-size: 30px;
-  }
-  /*seção */
+    margin: 20px;
+}
+
+/*seção */
+
 
 /*footer*/
-footer{
+footer {
     background-color: ffffffla;
-	border: 6px solid #34313430;
-	box-shadow: 0 0 30px #0000002a;
-  }
-  .footerContainer{
+    border: 6px solid #34313430;
+    box-shadow: 0 0 30px #0000002a;
+}
+
+.footerContainer {
     width: 100%;
-    padding:  10px 10px ;
-  }
-  .socialIcons{
+    padding: 10px 10px;
+}
+
+.socialIcons {
     display: flex;
     justify-content: center;
-  }
-  .socialIcons a{
+}
+
+.socialIcons a {
     text-decoration: none;
-    padding:  10px;
+    padding: 10px;
     background-color: white;
     margin: 10px;
     border-radius: 60%;
-  }
-  .socialIcons a i{
+}
+
+.socialIcons a i {
     font-size: 2em;
     color: black;
-    opacity: 0,9;
-  }
-  /* icones das redes sociais */
-  .socialIcons a:hover{
+    opacity: 0, 9;
+}
+
+/* icones das redes sociais */
+.socialIcons a:hover {
     background-color: #111;
     transition: 0.5s;
-  }
-  .socialIcons a:hover i{
+}
+
+.socialIcons a:hover i {
     color: white;
     transition: 0.5s;
-  }
-  .footerNav{
+}
+
+.footerNav {
     margin: 10px 0;
-  }
-  .footerNav ul{
+}
+
+.footerNav ul {
     display: flex;
     justify-content: center;
     list-style-type: none;
-  }
-  .footerNav ul li a{
-    color:white;
+}
+
+.footerNav ul li a {
+    color: white;
     margin: 10px;
     text-decoration: none;
     font-size: 1.3em;
     opacity: 0.7;
     transition: 0.5s;
-  
-  }
-  .footerNav ul li a:hover{
+
+}
+
+.footerNav ul li a:hover {
     opacity: 1;
-  }
-  .footerBottom{
+}
+
+.footerBottom {
     background-color: #000;
     text-align: center;
-    
-  }
-  .footerBottom p{
+
+}
+
+.footerBottom p {
     color: white;
-  }
-  .designer{
+}
+
+.designer {
     opacity: 0.7;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 400;
     margin: 0px 5px;
-  }
-  @media (max-width: 700px){
-    .footerNav ul{
+}
+
+@media (max-width: 700px) {
+    .footerNav ul {
         flex-direction: column;
-    } 
-    .footerNav ul li{
-        width:100%;
+    }
+
+    .footerNav ul li {
+        width: 100%;
         text-align: center;
         margin: 10px;
     }
-    .socialIcons a{
+
+    .socialIcons a {
         padding: 8px;
         margin: 4px;
     }
-  }
-  /*fim-footer*/
+}
+
+/*fim-footer*/
