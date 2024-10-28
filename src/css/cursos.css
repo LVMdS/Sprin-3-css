@@ -16,6 +16,7 @@ html {
 body {
     background-color: #f5f5f5;
 }
+
 /*!Seção Banner Principal*/
 .banner {
     background-image: url('../image/banner-11.png');
@@ -104,12 +105,6 @@ body {
 }
 
 
-
-
-
-
-
-
 .container-cursos {
     max-width: 1024px;
     display: grid;
@@ -127,8 +122,8 @@ body {
     background-color: aqua; 
     transition: transform 0.3s ease;
     clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 11%);
+    min-height: 240px;
 }
-
 
 .card-curso {
     width: 100%;
@@ -186,43 +181,6 @@ body {
     width: 80%;
     font-weight: 600;
 }
-
-
-@media (max-width: 992px) {
-    .container-cursos {
-        /* grid-template-columns: repeat(2, 1fr); */
-        grid-template-columns: repeat(2, minmax(360px, 1fr));
-    }
-}
-
-@media(max-width: 768px){
-    .container-cursos{
-        grid-template-columns: repeat(2, minmax(300px, 1fr));
-    }
-}
-
-
-@media (max-width: 648px) {
-    .container-cursos {
-        grid-template-columns: minmax(300px, 1fr);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*! Seção de blog */
@@ -295,6 +253,29 @@ body {
 }
 
 
+
+@media (max-width: 992px) {
+    .container-cursos {
+        /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-columns: repeat(2, minmax(360px, 1fr));
+    }
+}
+
+@media(max-width: 768px){
+    .container-cursos{
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+}
+
+
+@media (max-width: 648px) {
+    .container-cursos {
+        grid-template-columns: minmax(300px, 1fr);
+    }
+}
+
+
+
 /*! Responsividade */
 @media(max-width: 768px){
     .banner{
@@ -324,15 +305,15 @@ body {
 
 
 @media(max-width: 680px){
-    .cards-container{
+    /* .cards-container{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
+    } */
 
-    .card{
+    /* .card{
         width: 100%;
-    }
+    } */
 
     .blog-posts{
         flex-direction: column;
