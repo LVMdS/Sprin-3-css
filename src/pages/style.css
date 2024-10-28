@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: .3s ease;
+}
+  
+body {
+    background-color: #f5f5f5;
+}
+/*!Seção Banner Principal*/
+.banner {
+    background-image: url('../image/banner-11.png');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    transition: 0.5s ease;
+    position: relative;
+}
+
+.seta {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem; /* Aumentando o tamanho da seta */
+    color: #ffeb3b; /* Cor amarela clara */
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+
+.titulo-e-botao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    color: #ffffffaf;
+}
+
+.button {
+    max-width: 300px;
+    padding: 15px 30px;
+    background-color: rgba(0,0,0,.60);
+    color: #f5f5f5;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.button:hover{
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+}
+
+
+/*! Seção de cursos */
+.cursos {
+    padding: 20px;
+    text-align: center;
+    background: url(../image/galaxia-noturna-paint.jpg);
+}
+
+.cursos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #f5f5f5;
+}
+
+
+
+
+
+
+
+
+.container-cursos {
+    max-width: 1024px;
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.caixa-card {
+    padding: 0.5px;
+    display: flex;
+    background-color: aqua; 
+    transition: transform 0.3s ease;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 11%);
+}
+
+
+.card-curso {
+    width: 100%;
+    background-color: #021017;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+    cursor: pointer;
+}
+
+.caixa-card:hover {
+    transform: translateY(-10px);
+}
+
+.container-logo {
+    width: 100px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 100%;
+    object-fit: contain;
+}
+
+.titulo {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #5EB9E2;
+    text-align: left;
+}
+
+.descricao {
+    font-size: 11px;
+    color: #ffffffae;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.botao {
+    padding: 8px 16px;
+    background-color: #2BFDBE;
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: auto;
+    width: 80%;
+    font-weight: 600;
+}
+
+
+@media (max-width: 992px) {
+    .container-cursos {
+        /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-columns: repeat(2, minmax(360px, 1fr));
+    }
+}
+
+@media(max-width: 768px){
+    .container-cursos{
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+}
+
+
+@media (max-width: 648px) {
+    .container-cursos {
+        grid-template-columns: minmax(300px, 1fr);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*! Seção de blog */
+.blog {
+    background-color: #f5f5f5;
+    padding: 20px;
+    max-width: 1440px;
+    margin: 20px auto;
+}
+
+.blog h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.blog-posts {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.post {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 31%; /* Largura igual o iframe */
+    height: auto; /* Altura automática para se ajustar ao conteúdo */
+}
+
+.post a{
+    color: #1a1a1ad5;
+    font-weight: 600;
+}
+
+/*! Seção vídeos */
+.videos {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1440px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.videos iframe {
+    width: 31%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/*! Seção de perguntas frequentes */
+.container-perguntas {
+    background-color: #ffffff;
+    padding: 50px;
+    text-align: center;
+}
+.container-perguntas h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+.pergunta-item {
+    margin-bottom: 20px;
+}
+.pergunta-item h3 {
+    font-size: 1.5rem;
+}
+
+
+/*! Responsividade */
+@media(max-width: 768px){
+    .banner{
+        justify-content: flex-start;
+        height: 370px;
+    }
+    .banner h1{
+        font-size: 2rem;
+        margin-top: 40px;
+    }
+    .cursos h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 16px;
+    }
+    .videos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .videos iframe {
+        width: 100%;
+        max-width: 560px; /* largura máxima em dispositivos móveis */
+    }
+}
+
+
+@media(max-width: 680px){
+    .cards-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .blog-posts{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .post{
+        width: 80%;
+        min-height: 200px;
+    }
+}
+
+@media(max-width: 426px){
+    .post{
+        width: 100%;
+    }
+
+}
+
